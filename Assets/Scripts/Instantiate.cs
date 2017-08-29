@@ -7,7 +7,14 @@ public class Instantiate : MonoBehaviour {
 	public GameObject enemy1;
 	public GameObject enemy2;
 	public GameObject enemy3;
-	public GameObject remenber;
+	public GameObject remenber1;
+	public GameObject remenber2;
+	public GameObject remenber3;
+	public GameObject remenber4;
+	public GameObject remenber5;
+	public GameObject remenber6;
+	public GameObject obj;
+
 	public float delay;
 	private float range;
 	public bool flag;
@@ -31,7 +38,19 @@ public class Instantiate : MonoBehaviour {
 		if (cont % 5 == 0) {
 			cont++;
 			flag = false;
-			GameObject obj = Instantiate (remenber, new Vector3 (gameObject.transform.position.x, 0, 0), gameObject.transform.rotation);
+			if (cont == 6)
+				obj = Instantiate (remenber1, new Vector3 (gameObject.transform.position.x, 0, 0), gameObject.transform.rotation);
+			if (cont == 11)
+				obj = Instantiate (remenber2, new Vector3 (gameObject.transform.position.x, 0, 0), gameObject.transform.rotation);
+			if (cont == 16)
+				obj = Instantiate (remenber3, new Vector3 (gameObject.transform.position.x, 0, 0), gameObject.transform.rotation);
+			if (cont == 21)
+				obj = Instantiate (remenber4, new Vector3 (gameObject.transform.position.x, 0, 0), gameObject.transform.rotation);
+			if (cont == 26)
+				obj = Instantiate (remenber5, new Vector3 (gameObject.transform.position.x, 0, 0), gameObject.transform.rotation);
+			if (cont == 31)
+				obj = Instantiate (remenber6, new Vector3 (gameObject.transform.position.x, 0, 0), gameObject.transform.rotation);
+			
 			obj.GetComponent<RemenberBehaviour> ().cont = cont;
 		}
 		if (flag) {

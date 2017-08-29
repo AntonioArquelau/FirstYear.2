@@ -16,7 +16,7 @@ public class Player : MonoBehaviour {
 			GameObject.Find("PrefabInstantiator").GetComponent<Instantiate>().flag = false;
 			Invoke ("Teste",2f);
 			//gameObject.GetComponent<Animator> ().SetTrigger ("HurtAnimation");
-			//partner.GetComponent<Animator> ().SetTrigger ("HelpAnimation");
+			//partner.GetComponent<Animator>().SetTrigger ("HelpAnimation");
 		}
 	}
 	void OnCollisionExit2D(Collision2D obj){
