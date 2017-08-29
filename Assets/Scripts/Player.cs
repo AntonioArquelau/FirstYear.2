@@ -15,8 +15,8 @@ public class Player : MonoBehaviour {
 			Destroy (obj.gameObject);
 			GameObject.Find("PrefabInstantiator").GetComponent<Instantiate>().flag = false;
 			Invoke ("Teste",2f);
-			//gameObject.GetComponent<Animator> ().SetTrigger ("HurtAnimation");
-			//partner.GetComponent<Animator>().SetTrigger ("HelpAnimation");
+			gameObject.GetComponent<Animator> ().SetTrigger ("HurtAnimation");
+			partner.GetComponent<Animator>().SetTrigger ("HelpAnimation");
 		}
 	}
 	void OnCollisionExit2D(Collision2D obj){
