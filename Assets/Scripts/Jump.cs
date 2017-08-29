@@ -24,9 +24,11 @@ public class Jump : MonoBehaviour {
 		
 		if (Input.GetMouseButtonDown (0) && canJump) {
 			Debug.Log ("test");
-			if (Input.mousePosition.x > 520) {
+			if (Input.mousePosition.x > Screen.width/2) {
+				antonio.GetComponent<Animator> ().SetTrigger ("Jump");
 				rigidBody2DAntonio.AddForce (force);
 			} else {
+				jessica.GetComponent<Animator> ().SetTrigger ("Jump");
 				rigidBody2DJessica.AddForce (force);
 			}
 		}
