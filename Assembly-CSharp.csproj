@@ -55,6 +55,7 @@
      <Compile Include="Assets\Scripts\EnemiesBehaviour.cs" />
      <Compile Include="Assets\Scripts\Instantiate.cs" />
      <Compile Include="Assets\Scripts\Jump.cs" />
+     <Compile Include="Assets\Scripts\LoadScene.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\RemenberBehaviour.cs" />
  <Reference Include="UnityEngine.UI">
