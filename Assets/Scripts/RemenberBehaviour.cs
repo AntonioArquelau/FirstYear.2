@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class RemenberBehaviour : MonoBehaviour {
-
+	public int cont;
 	void Start(){
 		gameObject.GetComponent<Rigidbody2D> ().velocity = new Vector2 (-7, 0);
 	}
@@ -19,6 +19,8 @@ public class RemenberBehaviour : MonoBehaviour {
 	}
 	void OnMouseDown(){
 		Debug.Log ("teste");
+		if (cont >= 30)
+			Application.LoadLevel ("Main");
 		gameObject.GetComponent<Rigidbody2D> ().velocity = new Vector2 (-7, 0);
 	}
 }

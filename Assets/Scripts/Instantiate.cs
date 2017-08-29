@@ -8,7 +8,7 @@ public class Instantiate : MonoBehaviour {
 	public float delay;
 	private float range;
 	public bool flag;
-	private int cont;
+	private int cont = 1;
 	// Use this for initialization
 	void Start () {
 		flag = true;
@@ -20,17 +20,17 @@ public class Instantiate : MonoBehaviour {
 		if (cont % 5 == 0) {
 			cont++;
 			flag = false;
-			Instantiate (remenber, new Vector3 (gameObject.transform.position.x, 0, 0), gameObject.transform.rotation);
+			GameObject obj = Instantiate (remenber, new Vector3 (gameObject.transform.position.x, 0, 0), gameObject.transform.rotation);
+			obj.GetComponent<RemenberBehaviour> ().cont = cont;
 		}
 		if (flag) {
 			range = Mathf.Round (Random.Range (0, 2));
 			if (range == 0) {
-				Instantiate (prefab, new Vector3 (gameObject.transform.position.x, 2, 0), gameObject.transform.rotation);
+				Instantiate (prefab, new Vector3 (gameObject.transform.position.x, 1, 0), gameObject.transform.rotation);
 			} else {
-				Instantiate (prefab, new Vector3 (gameObject.transform.position.x, -2, 0), gameObject.transform.rotation);
+				Instantiate (prefab, new Vector3 (gameObject.transform.position.x, -3.5f, 0), gameObject.transform.rotation);
 			}
 			cont++;
 		}
-
 	}
 }
