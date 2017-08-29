@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Instantiate : MonoBehaviour {
-	public GameObject prefab;
+	private GameObject prefab;
+	public GameObject enemy1;
+	public GameObject enemy2;
+	public GameObject enemy3;
 	public GameObject remenber;
 	public float delay;
 	private float range;
@@ -14,9 +17,17 @@ public class Instantiate : MonoBehaviour {
 		flag = true;
 		InvokeRepeating ("InstantiatePrefab", 0, delay);
 	}
-	
+
 	// Update is called once per frame
 	void InstantiatePrefab () {
+		int range1 = (int)Mathf.Round(Random.Range (0, 3));
+		if (range1 == 0)
+			prefab = enemy1;
+		if (range1 == 1)
+			prefab = enemy2;
+		if (range1 == 2)
+			prefab = enemy3;
+		
 		if (cont % 5 == 0) {
 			cont++;
 			flag = false;

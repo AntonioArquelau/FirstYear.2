@@ -51,7 +51,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d8c315bf6fad3549be688b6dba943c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 1646146626503992, guid: a487289aeef601849a02491f892e5dd3, type: 2}
+  enemy1: {fileID: 1549573547774746, guid: e5bd33d471169cc44857e167f3d2fd79, type: 2}
+  enemy2: {fileID: 1610613549124962, guid: 883b114eab1d25e4fa0ad01bfa29939f, type: 2}
+  enemy3: {fileID: 1501167901852590, guid: e74ab775efab6234f95c35c1cf0b1f4f, type: 2}
   remenber: {fileID: 1558291374460814, guid: 55372e0573e82b040869658506f8e8d3, type: 2}
   delay: 3
   flag: 0
